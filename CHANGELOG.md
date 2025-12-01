@@ -1,5 +1,10 @@
 # UJCMS 发版说明
 
+## ujcms-10.1.2
+
+* fix: 修复默认 admin 密码错误问题
+* refactor: 增加 lombok 组件，domain 类使用 @Data 注解
+
 ## ujcms-10.1.1
 
 * fix: 补全访问统计代码

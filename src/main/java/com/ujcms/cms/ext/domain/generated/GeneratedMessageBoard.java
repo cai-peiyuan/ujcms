@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedMessageBoard implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -168,173 +170,4 @@ public class GeneratedMessageBoard implements Serializable {
     @Nullable
     @Schema(description="回复内容")
     private String replyText;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    @Nullable
-    public Long getReplyUserId() {
-        return replyUserId;
-    }
-
-    public void setReplyUserId(@Nullable Long replyUserId) {
-        this.replyUserId = replyUserId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    @Nullable
-    public OffsetDateTime getReplyDate() {
-        return replyDate;
-    }
-
-    public void setReplyDate(@Nullable OffsetDateTime replyDate) {
-        this.replyDate = replyDate;
-    }
-
-    @Nullable
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(@Nullable String contact) {
-        this.contact = contact;
-    }
-
-    @Nullable
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(@Nullable String nickname) {
-        this.nickname = nickname;
-    }
-
-    @Nullable
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(@Nullable String phone) {
-        this.phone = phone;
-    }
-
-    @Nullable
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(@Nullable String email) {
-        this.email = email;
-    }
-
-    @Nullable
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(@Nullable String address) {
-        this.address = address;
-    }
-
-    public Boolean getOpen() {
-        return open;
-    }
-
-    public void setOpen(Boolean open) {
-        this.open = open;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public Boolean getReplied() {
-        return replied;
-    }
-
-    public void setReplied(Boolean replied) {
-        this.replied = replied;
-    }
-
-    public Boolean getRecommended() {
-        return recommended;
-    }
-
-    public void setRecommended(Boolean recommended) {
-        this.recommended = recommended;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
-
-    @Nullable
-    public String getText() {
-        return text;
-    }
-
-    public void setText(@Nullable String text) {
-        this.text = text;
-    }
-
-    @Nullable
-    public String getReplyText() {
-        return replyText;
-    }
-
-    public void setReplyText(@Nullable String replyText) {
-        this.replyText = replyText;
-    }
 }

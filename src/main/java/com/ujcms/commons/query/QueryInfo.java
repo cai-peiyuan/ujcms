@@ -98,6 +98,20 @@ public class QueryInfo {
         this.orderByConditions = orderByConditions;
     }
 
+    @Override
+    public String toString() {
+        return "QueryInfo{" +
+                "\n  selectOrderBy='" + selectOrderBy + '\'' +
+                ",\n  mainTable='" + mainTable + '\'' +
+                ",\n  tablePrefix='" + tablePrefix + '\'' +
+                ",\n  distinct=" + distinct +
+                ",\n  joinTables=" + joinTables +
+                ",\n  whereConditions=" + whereConditions +
+                ",\n  whereOrAndConditions=" + whereOrAndConditions +
+                ",\n  orderByConditions=" + orderByConditions +
+                "\n}";
+    }
+
     public static class WhereCondition {
         private String column;
         @Nullable
@@ -181,13 +195,13 @@ public class QueryInfo {
         @Override
         public String toString() {
             return "WhereCondition{" +
-                    "column='" + column + '\'' +
-                    ", jsonColumn='" + jsonColumn + '\'' +
-                    ", operator='" + operator + '\'' +
-                    ", array=" + array +
-                    ", value=" + value +
-                    ", type='" + type + '\'' +
-                    '}';
+                    "\n    column='" + column + '\'' +
+                    ",\n    jsonColumn='" + jsonColumn + '\'' +
+                    ",\n    operator='" + operator + '\'' +
+                    ",\n    array=" + array +
+                    ",\n    value=" + value +
+                    ",\n    type='" + type + '\'' +
+                    "\n  }";
         }
     }
 
@@ -254,11 +268,11 @@ public class QueryInfo {
         @Override
         public String toString() {
             return "OrderByCondition{" +
-                    "column='" + column + '\'' +
-                    ", jsonColumn='" + jsonColumn + '\'' +
-                    ", type='" + type + '\'' +
-                    ", direction='" + direction + '\'' +
-                    '}';
+                    "\n    column='" + column + '\'' +
+                    ",\n    jsonColumn='" + jsonColumn + '\'' +
+                    ",\n    type='" + type + '\'' +
+                    ",\n    direction='" + direction + '\'' +
+                    "\n  }";
         }
     }
 
@@ -314,11 +328,11 @@ public class QueryInfo {
         @Override
         public String toString() {
             return "JoinTable{" +
-                    "tableName='" + tableName + '\'' +
-                    ", tableAlias='" + tableAlias + '\'' +
-                    ", leftId='" + leftId + '\'' +
-                    ", rightId='" + rightId + '\'' +
-                    '}';
+                    "\n    tableName='" + tableName + '\'' +
+                    ",\n    tableAlias='" + tableAlias + '\'' +
+                    ",\n    leftId='" + leftId + '\'' +
+                    ",\n    rightId='" + rightId + '\'' +
+                    "\n  }";
         }
     }
 

@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedDict implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -86,78 +88,4 @@ public class GeneratedDict implements Serializable {
     @NotNull
     @Schema(description="是否启用")
     private Boolean enabled = true;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
-
-    @Nullable
-    public Long getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(@Nullable Long parentId) {
-        this.parentId = parentId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    @Nullable
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(@Nullable String remark) {
-        this.remark = remark;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
-    public Boolean getSys() {
-        return sys;
-    }
-
-    public void setSys(Boolean sys) {
-        this.sys = sys;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
 }

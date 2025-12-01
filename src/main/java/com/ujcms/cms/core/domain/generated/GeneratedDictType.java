@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedDictType implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -86,78 +88,4 @@ public class GeneratedDictType implements Serializable {
     @NotNull
     @Schema(description="是否系统字典")
     private Boolean sys = false;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(@Nullable Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAlias() {
-        return alias;
-    }
-
-    public void setAlias(String alias) {
-        this.alias = alias;
-    }
-
-    @Nullable
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(@Nullable String remark) {
-        this.remark = remark;
-    }
-
-    public Short getScope() {
-        return scope;
-    }
-
-    public void setScope(Short scope) {
-        this.scope = scope;
-    }
-
-    public Short getDataType() {
-        return dataType;
-    }
-
-    public void setDataType(Short dataType) {
-        this.dataType = dataType;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
-    public Boolean getSys() {
-        return sys;
-    }
-
-    public void setSys(Boolean sys) {
-        this.sys = sys;
-    }
 }

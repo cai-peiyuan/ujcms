@@ -15,17 +15,10 @@ import java.util.Map;
  */
 public class ChannelArgs extends BaseQueryArgs {
     @Nullable
-    private Map<String, String> customsQueryMap;
-    @Nullable
     private Collection<Long> articleRoleIds;
     @Nullable
     private Collection<Long> articleOrgIds;
     private boolean queryHasChildren = false;
-
-    public ChannelArgs customsQueryMap(Map<String, String> customsQueryMap) {
-        this.customsQueryMap = customsQueryMap;
-        return this;
-    }
 
     public void articlePermission(Collection<Long> articleRoleIds, Collection<Long> articleOrgIds) {
         this.articleRoleIds = articleRoleIds;
@@ -108,11 +101,6 @@ public class ChannelArgs extends BaseQueryArgs {
 
     private ChannelArgs(Map<String, Object> queryMap) {
         super(queryMap);
-    }
-
-    @Nullable
-    public Map<String, String> getCustomsQueryMap() {
-        return customsQueryMap;
     }
 
     public boolean isQueryHasChildren() {

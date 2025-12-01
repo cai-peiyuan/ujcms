@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedTask implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -99,94 +101,4 @@ public class GeneratedTask implements Serializable {
     @Nullable
     @Schema(description="错误信息")
     private String errorInfo;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public OffsetDateTime getBeginDate() {
-        return beginDate;
-    }
-
-    public void setBeginDate(OffsetDateTime beginDate) {
-        this.beginDate = beginDate;
-    }
-
-    @Nullable
-    public OffsetDateTime getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(@Nullable OffsetDateTime endDate) {
-        this.endDate = endDate;
-    }
-
-    public Integer getCurrent() {
-        return current;
-    }
-
-    public void setCurrent(Integer current) {
-        this.current = current;
-    }
-
-    public Integer getTotal() {
-        return total;
-    }
-
-    public void setTotal(Integer total) {
-        this.total = total;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
-
-    @Nullable
-    public String getErrorInfo() {
-        return errorInfo;
-    }
-
-    public void setErrorInfo(@Nullable String errorInfo) {
-        this.errorInfo = errorInfo;
-    }
 }

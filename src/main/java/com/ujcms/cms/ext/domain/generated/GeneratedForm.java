@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedForm implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -122,119 +124,4 @@ public class GeneratedForm implements Serializable {
     @Nullable
     @Schema(description="自定义主字段")
     private String mainsJson;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getTypeId() {
-        return typeId;
-    }
-
-    public void setTypeId(Long typeId) {
-        this.typeId = typeId;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Long getModifiedUserId() {
-        return modifiedUserId;
-    }
-
-    public void setModifiedUserId(Long modifiedUserId) {
-        this.modifiedUserId = modifiedUserId;
-    }
-
-    @Nullable
-    public String getProcessInstanceId() {
-        return processInstanceId;
-    }
-
-    public void setProcessInstanceId(@Nullable String processInstanceId) {
-        this.processInstanceId = processInstanceId;
-    }
-
-    @Nullable
-    public String getRejectReason() {
-        return rejectReason;
-    }
-
-    public void setRejectReason(@Nullable String rejectReason) {
-        this.rejectReason = rejectReason;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    public OffsetDateTime getModified() {
-        return modified;
-    }
-
-    public void setModified(OffsetDateTime modified) {
-        this.modified = modified;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
-
-    @Nullable
-    public String getMainsJson() {
-        return mainsJson;
-    }
-
-    public void setMainsJson(@Nullable String mainsJson) {
-        this.mainsJson = mainsJson;
-    }
 }

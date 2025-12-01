@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedOrg implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -80,72 +82,4 @@ public class GeneratedOrg implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Integer order = 999999;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(@Nullable Long parentId) {
-        this.parentId = parentId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(@Nullable String phone) {
-        this.phone = phone;
-    }
-
-    @Nullable
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(@Nullable String address) {
-        this.address = address;
-    }
-
-    @Nullable
-    public String getContacts() {
-        return contacts;
-    }
-
-    public void setContacts(@Nullable String contacts) {
-        this.contacts = contacts;
-    }
-
-    public Short getDepth() {
-        return depth;
-    }
-
-    public void setDepth(Short depth) {
-        this.depth = depth;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
 }

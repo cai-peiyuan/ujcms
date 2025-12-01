@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedFormType implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -101,95 +103,4 @@ public class GeneratedFormType implements Serializable {
     @NotNull
     @Schema(description="是否启用")
     private Boolean enabled = true;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getModelId() {
-        return modelId;
-    }
-
-    public void setModelId(Long modelId) {
-        this.modelId = modelId;
-    }
-
-    @Nullable
-    public String getProcessKey() {
-        return processKey;
-    }
-
-    public void setProcessKey(@Nullable String processKey) {
-        this.processKey = processKey;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getListTemplate() {
-        return listTemplate;
-    }
-
-    public void setListTemplate(@Nullable String listTemplate) {
-        this.listTemplate = listTemplate;
-    }
-
-    @Nullable
-    public String getItemTemplate() {
-        return itemTemplate;
-    }
-
-    public void setItemTemplate(@Nullable String itemTemplate) {
-        this.itemTemplate = itemTemplate;
-    }
-
-    public Short getMode() {
-        return mode;
-    }
-
-    public void setMode(Short mode) {
-        this.mode = mode;
-    }
-
-    public Boolean getViewable() {
-        return viewable;
-    }
-
-    public void setViewable(Boolean viewable) {
-        this.viewable = viewable;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
 }

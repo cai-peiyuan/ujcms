@@ -126,7 +126,6 @@ public class ChannelController {
         Map<String, String> params = QueryUtils.getParams(request.getQueryString());
         ChannelArgs args = ChannelArgs.of(QueryUtils.getQueryMap(params, QUERY_PREFIX));
         ChannelListDirective.assemble(args, params, site.getId(), channelService);
-        args.customsQueryMap(QueryUtils.getCustomsQueryMap(params));
         return ChannelListDirective.selectList(channelService, args, params);
     }
 

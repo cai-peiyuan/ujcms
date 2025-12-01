@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedSurveyItem implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -69,60 +71,4 @@ public class GeneratedSurveyItem implements Serializable {
     @NotNull
     @Schema(description="是否问答")
     private Boolean essay = false;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getSurveyId() {
-        return surveyId;
-    }
-
-    public void setSurveyId(Long surveyId) {
-        this.surveyId = surveyId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
-    public Boolean getMultiple() {
-        return multiple;
-    }
-
-    public void setMultiple(Boolean multiple) {
-        this.multiple = multiple;
-    }
-
-    public Boolean getEssay() {
-        return essay;
-    }
-
-    public void setEssay(Boolean essay) {
-        this.essay = essay;
-    }
 }

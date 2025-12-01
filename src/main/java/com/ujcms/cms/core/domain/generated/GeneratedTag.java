@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedTag implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -72,61 +74,4 @@ public class GeneratedTag implements Serializable {
     @NotNull
     @Schema(description="引用数量")
     private Integer refers = 0;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    public Integer getRefers() {
-        return refers;
-    }
-
-    public void setRefers(Integer refers) {
-        this.refers = refers;
-    }
 }

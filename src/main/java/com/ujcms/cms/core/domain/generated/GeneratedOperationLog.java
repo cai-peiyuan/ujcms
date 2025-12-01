@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -12,6 +13,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedOperationLog implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -101,92 +103,4 @@ public class GeneratedOperationLog implements Serializable {
     @NotNull
     @Schema(description="状态(0:失败,1:成功)")
     private Short status = 1;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getModule() {
-        return module;
-    }
-
-    public void setModule(String module) {
-        this.module = module;
-    }
-
-    public String getRequestMethod() {
-        return requestMethod;
-    }
-
-    public void setRequestMethod(String requestMethod) {
-        this.requestMethod = requestMethod;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    public Boolean getAudit() {
-        return audit;
-    }
-
-    public void setAudit(Boolean audit) {
-        this.audit = audit;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
 }

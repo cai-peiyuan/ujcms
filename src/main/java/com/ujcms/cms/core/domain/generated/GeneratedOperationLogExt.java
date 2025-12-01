@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.springframework.lang.Nullable;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedOperationLogExt implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -54,48 +56,4 @@ public class GeneratedOperationLogExt implements Serializable {
     @Nullable
     @Schema(description="异常堆栈")
     private String exceptionStack;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public String getRequestUrl() {
-        return requestUrl;
-    }
-
-    public void setRequestUrl(@Nullable String requestUrl) {
-        this.requestUrl = requestUrl;
-    }
-
-    @Nullable
-    public String getRequestBody() {
-        return requestBody;
-    }
-
-    public void setRequestBody(@Nullable String requestBody) {
-        this.requestBody = requestBody;
-    }
-
-    @Nullable
-    public String getResponseEntity() {
-        return responseEntity;
-    }
-
-    public void setResponseEntity(@Nullable String responseEntity) {
-        this.responseEntity = responseEntity;
-    }
-
-    @Nullable
-    public String getExceptionStack() {
-        return exceptionStack;
-    }
-
-    public void setExceptionStack(@Nullable String exceptionStack) {
-        this.exceptionStack = exceptionStack;
-    }
 }

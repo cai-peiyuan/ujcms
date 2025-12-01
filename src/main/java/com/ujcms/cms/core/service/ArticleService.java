@@ -18,7 +18,6 @@ import com.ujcms.cms.core.mapper.ArticleTagMapper;
 import com.ujcms.cms.core.service.args.ArticleArgs;
 import com.ujcms.commons.db.identifier.SnowflakeSequence;
 import com.ujcms.commons.db.order.OrderEntityUtils;
-import com.ujcms.commons.query.CustomFieldQuery;
 import com.ujcms.commons.query.OffsetLimitRequest;
 import com.ujcms.commons.query.QueryInfo;
 import com.ujcms.commons.query.QueryParser;
@@ -60,8 +59,8 @@ public class ArticleService implements ChannelDeleteListener, UserDeleteListener
     private final SnowflakeSequence snowflakeSequence;
 
     public ArticleService(HtmlService htmlService, PolicyFactory policyFactory, RuntimeService runtimeService,
-                          ChannelService channelService, TagService tagService, BlockItemService blockItemService,
-                          ArticleLucene articleLucene, ArticleMapper mapper, ArticleExtMapper extMapper,
+            ChannelService channelService, TagService tagService, BlockItemService blockItemService,
+            ArticleLucene articleLucene, ArticleMapper mapper, ArticleExtMapper extMapper,
                           ArticleTagMapper articleTagMapper, AttachmentService attachmentService, SnowflakeSequence snowflakeSequence) {
         this.htmlService = htmlService;
         this.policyFactory = policyFactory;
@@ -319,9 +318,8 @@ public class ArticleService implements ChannelDeleteListener, UserDeleteListener
 
     public List<Article> selectList(ArticleArgs args) {
         QueryInfo queryInfo = QueryParser.parse(args.getQueryMap(), GeneratedArticle.TABLE_NAME, "order_desc,id_desc");
-        List<QueryInfo.WhereCondition> customsCondition = CustomFieldQuery.parse(args.getCustomsQueryMap());
-        return mapper.selectAll(queryInfo, customsCondition, args.getChannelAncestorIds(), args.getOrgIds(),
-                args.getArticleRoleIds(), args.getArticleOrgIds(), args.getOrgRoleIds(), args.getOrgPermIds());
+        return mapper.selectAll(queryInfo, args.getChannelAncestorIds(), args.getOrgIds(), args.getArticleRoleIds(),
+                args.getArticleOrgIds(), args.getOrgRoleIds(), args.getOrgPermIds());
     }
 
     public long count(ArticleArgs args) {
@@ -385,8 +383,7 @@ public class ArticleService implements ChannelDeleteListener, UserDeleteListener
             args.setExcludeIds(Collections.singletonList(excludeId));
         }
         // 获取得分最高的10条记录
-        List<EsArticle> list = articleLucene.findAll(args, null, new OffsetLimitRequest(0, 10))
-                .getContent();
+        List<EsArticle> list = articleLucene.findAll(args, null, new OffsetLimitRequest(0, 10)).getContent();
         List<EsArticle> result = new ArrayList<>();
         JaroWinkler jaroWinkler = new JaroWinkler();
         for (EsArticle bean : list) {

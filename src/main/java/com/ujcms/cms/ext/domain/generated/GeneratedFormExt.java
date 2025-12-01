@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.springframework.lang.Nullable;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedFormExt implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -33,21 +35,4 @@ public class GeneratedFormExt implements Serializable {
     @Nullable
     @Schema(description="自定义大字段")
     private String clobsJson;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public String getClobsJson() {
-        return clobsJson;
-    }
-
-    public void setClobsJson(@Nullable String clobsJson) {
-        this.clobsJson = clobsJson;
-    }
 }

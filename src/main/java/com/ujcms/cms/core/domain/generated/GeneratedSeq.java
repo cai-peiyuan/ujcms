@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedSeq implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -41,28 +43,4 @@ public class GeneratedSeq implements Serializable {
     @NotNull
     @Schema(description="缓存数量(大于0时有效，等于0则由程序确定大小)")
     private Integer cacheSize = 0;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getNextVal() {
-        return nextVal;
-    }
-
-    public void setNextVal(Long nextVal) {
-        this.nextVal = nextVal;
-    }
-
-    public Integer getCacheSize() {
-        return cacheSize;
-    }
-
-    public void setCacheSize(Integer cacheSize) {
-        this.cacheSize = cacheSize;
-    }
 }

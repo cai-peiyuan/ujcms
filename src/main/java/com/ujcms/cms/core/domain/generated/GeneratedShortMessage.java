@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -12,6 +13,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedShortMessage implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -86,76 +88,4 @@ public class GeneratedShortMessage implements Serializable {
     @NotNull
     @Schema(description="状态(0:未使用,1:验证正确,2:验证错误,3:已过期,4:尝试次数过多)")
     private Short status = 0;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public String getReceiver() {
-        return receiver;
-    }
-
-    public void setReceiver(String receiver) {
-        this.receiver = receiver;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public OffsetDateTime getSendDate() {
-        return sendDate;
-    }
-
-    public void setSendDate(OffsetDateTime sendDate) {
-        this.sendDate = sendDate;
-    }
-
-    public Integer getAttempts() {
-        return attempts;
-    }
-
-    public void setAttempts(Integer attempts) {
-        this.attempts = attempts;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public Short getUsage() {
-        return usage;
-    }
-
-    public void setUsage(Short usage) {
-        this.usage = usage;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
 }

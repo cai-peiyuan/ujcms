@@ -91,7 +91,6 @@ public class ChannelListDirective implements TemplateDirectiveModel {
 
         ChannelArgs args = ChannelArgs.of(Directives.getQueryMap(params));
         assemble(args, params, defaultSiteId, channelService);
-        args.customsQueryMap(Directives.getCustomsQueryMap(params));
         List<Channel> list = selectList(channelService, args, params);
         loopVars[0] = env.getObjectWrapper().wrap(list);
         body.render(env.getOut());

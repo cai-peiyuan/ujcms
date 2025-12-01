@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedGlobal implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -35,21 +37,4 @@ public class GeneratedGlobal implements Serializable {
     @Nullable
     @Schema(description="值")
     private String value;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(@Nullable String value) {
-        this.value = value;
-    }
 }

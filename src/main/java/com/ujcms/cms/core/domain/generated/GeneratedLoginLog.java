@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedLoginLog implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -72,62 +74,4 @@ public class GeneratedLoginLog implements Serializable {
     @NotNull
     @Schema(description="状态(0:成功,1:用户名不存在,2:密码错误,3:验证码错误,4:短信错误)")
     private Short status = 1;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(@Nullable Long userId) {
-        this.userId = userId;
-    }
-
-    @Nullable
-    public String getLoginName() {
-        return loginName;
-    }
-
-    public void setLoginName(@Nullable String loginName) {
-        this.loginName = loginName;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
 }

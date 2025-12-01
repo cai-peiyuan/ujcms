@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedPerformanceType implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -55,44 +57,4 @@ public class GeneratedPerformanceType implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Long order = 0L;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getScore() {
-        return score;
-    }
-
-    public void setScore(Integer score) {
-        this.score = score;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
 }

@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedMessageBoardType implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -57,47 +59,4 @@ public class GeneratedMessageBoardType implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Long order = 0L;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(@Nullable Long siteId) {
-        this.siteId = siteId;
-    }
-
-    @Nullable
-    public String getName() {
-        return name;
-    }
-
-    public void setName(@Nullable String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
 }

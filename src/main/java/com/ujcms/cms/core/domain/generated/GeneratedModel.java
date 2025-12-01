@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedModel implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -85,80 +87,4 @@ public class GeneratedModel implements Serializable {
     @Nullable
     @Schema(description="自定义字段集")
     private String customs;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(@Nullable Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public Short getScope() {
-        return scope;
-    }
-
-    public void setScope(Short scope) {
-        this.scope = scope;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
-    @Nullable
-    public String getMains() {
-        return mains;
-    }
-
-    public void setMains(@Nullable String mains) {
-        this.mains = mains;
-    }
-
-    @Nullable
-    public String getAsides() {
-        return asides;
-    }
-
-    public void setAsides(@Nullable String asides) {
-        this.asides = asides;
-    }
-
-    @Nullable
-    public String getCustoms() {
-        return customs;
-    }
-
-    public void setCustoms(@Nullable String customs) {
-        this.customs = customs;
-    }
 }

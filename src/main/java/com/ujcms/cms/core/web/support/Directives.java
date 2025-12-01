@@ -172,16 +172,6 @@ public class Directives {
         return queryMap;
     }
 
-    /**
-     * 自定义字段
-     */
-    public static final String CUSTOMS = "customs";
-
-    public static Map<String, String> getCustomsQueryMap(Map<String, TemplateModel> params)
-            throws TemplateModelException {
-        return Freemarkers.getStringMap(params.get(CUSTOMS));
-    }
-
     @Nullable
     public static String getString(Map<String, ?> params, String name) {
         Object obj = params.get(name);

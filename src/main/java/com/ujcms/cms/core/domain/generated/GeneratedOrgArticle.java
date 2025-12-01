@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.springframework.lang.Nullable;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedOrgArticle implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -40,29 +42,4 @@ public class GeneratedOrgArticle implements Serializable {
     @Nullable
     @Schema(description="站点ID")
     private Long siteId;
-
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public Long getChannelId() {
-        return channelId;
-    }
-
-    public void setChannelId(Long channelId) {
-        this.channelId = channelId;
-    }
-
-    @Nullable
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(@Nullable Long siteId) {
-        this.siteId = siteId;
-    }
 }

@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedCollectionField implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -162,163 +164,4 @@ public class GeneratedCollectionField implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Integer order = 0;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getCollectionId() {
-        return collectionId;
-    }
-
-    public void setCollectionId(Long collectionId) {
-        this.collectionId = collectionId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getDataType() {
-        return dataType;
-    }
-
-    public void setDataType(Short dataType) {
-        this.dataType = dataType;
-    }
-
-    public Short getSource() {
-        return source;
-    }
-
-    public void setSource(Short source) {
-        this.source = source;
-    }
-
-    @Nullable
-    public String getStaticValue() {
-        return staticValue;
-    }
-
-    public void setStaticValue(@Nullable String staticValue) {
-        this.staticValue = staticValue;
-    }
-
-    @Nullable
-    public String getDateFormat() {
-        return dateFormat;
-    }
-
-    public void setDateFormat(@Nullable String dateFormat) {
-        this.dateFormat = dateFormat;
-    }
-
-    @Nullable
-    public String getAreaPattern() {
-        return areaPattern;
-    }
-
-    public void setAreaPattern(@Nullable String areaPattern) {
-        this.areaPattern = areaPattern;
-    }
-
-    public Boolean getAreaReg() {
-        return areaReg;
-    }
-
-    public void setAreaReg(Boolean areaReg) {
-        this.areaReg = areaReg;
-    }
-
-    @Nullable
-    public String getItemPattern() {
-        return itemPattern;
-    }
-
-    public void setItemPattern(@Nullable String itemPattern) {
-        this.itemPattern = itemPattern;
-    }
-
-    @Nullable
-    public String getItemFilter() {
-        return itemFilter;
-    }
-
-    public void setItemFilter(@Nullable String itemFilter) {
-        this.itemFilter = itemFilter;
-    }
-
-    public Boolean getItemReg() {
-        return itemReg;
-    }
-
-    public void setItemReg(Boolean itemReg) {
-        this.itemReg = itemReg;
-    }
-
-    public Boolean getItemJs() {
-        return itemJs;
-    }
-
-    public void setItemJs(Boolean itemJs) {
-        this.itemJs = itemJs;
-    }
-
-    @Nullable
-    public String getDataUrl() {
-        return dataUrl;
-    }
-
-    public void setDataUrl(@Nullable String dataUrl) {
-        this.dataUrl = dataUrl;
-    }
-
-    @Nullable
-    public String getDataFilter() {
-        return dataFilter;
-    }
-
-    public void setDataFilter(@Nullable String dataFilter) {
-        this.dataFilter = dataFilter;
-    }
-
-    public Boolean getDataJs() {
-        return dataJs;
-    }
-
-    public void setDataJs(Boolean dataJs) {
-        this.dataJs = dataJs;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
 }

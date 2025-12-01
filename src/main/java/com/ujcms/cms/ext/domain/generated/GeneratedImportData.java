@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedImportData implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -66,53 +68,4 @@ public class GeneratedImportData implements Serializable {
     @NotNull
     @Schema(description="类型(1:数据迁移,2:站点导入)")
     private Short type = 1;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTableName() {
-        return tableName;
-    }
-
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
-    }
-
-    public String getCurrentId() {
-        return currentId;
-    }
-
-    public void setCurrentId(String currentId) {
-        this.currentId = currentId;
-    }
-
-    public String getOrigId() {
-        return origId;
-    }
-
-    public void setOrigId(String origId) {
-        this.origId = origId;
-    }
-
-    @Nullable
-    public String getOrigParentId() {
-        return origParentId;
-    }
-
-    public void setOrigParentId(@Nullable String origParentId) {
-        this.origParentId = origParentId;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
 }

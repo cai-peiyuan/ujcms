@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedUser implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -141,139 +143,4 @@ public class GeneratedUser implements Serializable {
     @NotNull
     @Schema(description="状态(0:正常,1:未激活,2:已锁定,3:已注销)")
     private Short status = 0;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getGroupId() {
-        return groupId;
-    }
-
-    public void setGroupId(Long groupId) {
-        this.groupId = groupId;
-    }
-
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    @Nullable
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(@Nullable String password) {
-        this.password = password;
-    }
-
-    @Nullable
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(@Nullable String email) {
-        this.email = email;
-    }
-
-    @Nullable
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(@Nullable String mobile) {
-        this.mobile = mobile;
-    }
-
-    @Nullable
-    public String getAlias() {
-        return alias;
-    }
-
-    public void setAlias(@Nullable String alias) {
-        this.alias = alias;
-    }
-
-    @Nullable
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(@Nullable String nickname) {
-        this.nickname = nickname;
-    }
-
-    @Nullable
-    public String getRealName() {
-        return realName;
-    }
-
-    public void setRealName(@Nullable String realName) {
-        this.realName = realName;
-    }
-
-    public Short getGender() {
-        return gender;
-    }
-
-    public void setGender(Short gender) {
-        this.gender = gender;
-    }
-
-    @Nullable
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(@Nullable String avatar) {
-        this.avatar = avatar;
-    }
-
-    public OffsetDateTime getPasswordModified() {
-        return passwordModified;
-    }
-
-    public void setPasswordModified(OffsetDateTime passwordModified) {
-        this.passwordModified = passwordModified;
-    }
-
-    public Short getRank() {
-        return rank;
-    }
-
-    public void setRank(Short rank) {
-        this.rank = rank;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
 }

@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedVisitPage implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -77,68 +79,4 @@ public class GeneratedVisitPage implements Serializable {
     @NotNull
     @Schema(description="类型(1:访问地址,2:入口地址)")
     private Short type = 1;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public Long getPvCount() {
-        return pvCount;
-    }
-
-    public void setPvCount(Long pvCount) {
-        this.pvCount = pvCount;
-    }
-
-    public Long getUvCount() {
-        return uvCount;
-    }
-
-    public void setUvCount(Long uvCount) {
-        this.uvCount = uvCount;
-    }
-
-    public Long getIpCount() {
-        return ipCount;
-    }
-
-    public void setIpCount(Long ipCount) {
-        this.ipCount = ipCount;
-    }
-
-    public String getDateString() {
-        return dateString;
-    }
-
-    public void setDateString(String dateString) {
-        this.dateString = dateString;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
 }

@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedVisitLog implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -172,165 +174,4 @@ public class GeneratedVisitLog implements Serializable {
     @NotNull
     @Schema(description="是否新访客")
     private Boolean newVisitor = false;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getEntryUrl() {
-        return entryUrl;
-    }
-
-    public void setEntryUrl(String entryUrl) {
-        this.entryUrl = entryUrl;
-    }
-
-    public String getSource() {
-        return source;
-    }
-
-    public void setSource(String source) {
-        this.source = source;
-    }
-
-    public String getSourceType() {
-        return sourceType;
-    }
-
-    public void setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
-    }
-
-    public String getDevice() {
-        return device;
-    }
-
-    public void setDevice(String device) {
-        this.device = device;
-    }
-
-    public String getOs() {
-        return os;
-    }
-
-    public void setOs(String os) {
-        this.os = os;
-    }
-
-    public String getBrowser() {
-        return browser;
-    }
-
-    public void setBrowser(String browser) {
-        this.browser = browser;
-    }
-
-    @Nullable
-    public String getUserAgent() {
-        return userAgent;
-    }
-
-    public void setUserAgent(@Nullable String userAgent) {
-        this.userAgent = userAgent;
-    }
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
-    }
-
-    public Long getSi() {
-        return si;
-    }
-
-    public void setSi(Long si) {
-        this.si = si;
-    }
-
-    public Long getUv() {
-        return uv;
-    }
-
-    public void setUv(Long uv) {
-        this.uv = uv;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public OffsetDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(OffsetDateTime date) {
-        this.date = date;
-    }
-
-    public Integer getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
-    public Boolean getNewVisitor() {
-        return newVisitor;
-    }
-
-    public void setNewVisitor(Boolean newVisitor) {
-        this.newVisitor = newVisitor;
-    }
 }

@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.springframework.lang.Nullable;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedArticle implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -153,160 +155,4 @@ public class GeneratedArticle implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Long order = 0L;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getSrcId() {
-        return srcId;
-    }
-
-    public void setSrcId(@Nullable Long srcId) {
-        this.srcId = srcId;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public Long getChannelId() {
-        return channelId;
-    }
-
-    public void setChannelId(Long channelId) {
-        this.channelId = channelId;
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public Long getModifiedUserId() {
-        return modifiedUserId;
-    }
-
-    public void setModifiedUserId(Long modifiedUserId) {
-        this.modifiedUserId = modifiedUserId;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    public OffsetDateTime getModified() {
-        return modified;
-    }
-
-    public void setModified(OffsetDateTime modified) {
-        this.modified = modified;
-    }
-
-    public OffsetDateTime getPublishDate() {
-        return publishDate;
-    }
-
-    public void setPublishDate(OffsetDateTime publishDate) {
-        this.publishDate = publishDate;
-    }
-
-    @Nullable
-    public OffsetDateTime getOnlineDate() {
-        return onlineDate;
-    }
-
-    public void setOnlineDate(@Nullable OffsetDateTime onlineDate) {
-        this.onlineDate = onlineDate;
-    }
-
-    @Nullable
-    public OffsetDateTime getOfflineDate() {
-        return offlineDate;
-    }
-
-    public void setOfflineDate(@Nullable OffsetDateTime offlineDate) {
-        this.offlineDate = offlineDate;
-    }
-
-    public Short getSticky() {
-        return sticky;
-    }
-
-    public void setSticky(Short sticky) {
-        this.sticky = sticky;
-    }
-
-    @Nullable
-    public OffsetDateTime getStickyDate() {
-        return stickyDate;
-    }
-
-    public void setStickyDate(@Nullable OffsetDateTime stickyDate) {
-        this.stickyDate = stickyDate;
-    }
-
-    public Boolean getWithImage() {
-        return withImage;
-    }
-
-    public void setWithImage(Boolean withImage) {
-        this.withImage = withImage;
-    }
-
-    public Short getInputType() {
-        return inputType;
-    }
-
-    public void setInputType(Short inputType) {
-        this.inputType = inputType;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getStatus() {
-        return status;
-    }
-
-    public void setStatus(Short status) {
-        this.status = status;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
 }

@@ -69,7 +69,6 @@ public class SiteListDirective implements TemplateDirectiveModel {
 
         SiteArgs args = SiteArgs.of(Directives.getQueryMap(params));
         assemble(args, params);
-        args.customsQueryMap(Directives.getCustomsQueryMap(params));
         List<Site> list = selectList(siteService, args, params);
         loopVars[0] = env.getObjectWrapper().wrap(list);
         body.render(env.getOut());

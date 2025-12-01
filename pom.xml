@@ -6,7 +6,7 @@
 
   <groupId>com.ujcms</groupId>
   <artifactId>ujcms</artifactId>
-  <version>10.1.1</version>
+  <version>10.1.2</version>
   <packaging>${project.packaging}</packaging>
 
   <name>UJCMS</name>
@@ -517,6 +517,12 @@
       <artifactId>spring-boot-devtools</artifactId>
       <optional>true</optional>
     </dependency>
+    <!-- Lombok 代码生成工具 -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.mybatis.generator</groupId>
       <artifactId>mybatis-generator-core</artifactId>
@@ -566,6 +572,11 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
             <path>
               <groupId>com.github.therapi</groupId>
               <artifactId>therapi-runtime-javadoc-scribe</artifactId>

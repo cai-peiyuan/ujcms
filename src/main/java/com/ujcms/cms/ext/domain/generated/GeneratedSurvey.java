@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedSurvey implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -107,103 +109,4 @@ public class GeneratedSurvey implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Long order = 0L;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
-    }
-
-    @Nullable
-    public OffsetDateTime getBeginDate() {
-        return beginDate;
-    }
-
-    public void setBeginDate(@Nullable OffsetDateTime beginDate) {
-        this.beginDate = beginDate;
-    }
-
-    @Nullable
-    public OffsetDateTime getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(@Nullable OffsetDateTime endDate) {
-        this.endDate = endDate;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    public Short getMode() {
-        return mode;
-    }
-
-    public void setMode(Short mode) {
-        this.mode = mode;
-    }
-
-    public Integer getTimes() {
-        return times;
-    }
-
-    public void setTimes(Integer times) {
-        this.times = times;
-    }
-
-    public Integer getInterval() {
-        return interval;
-    }
-
-    public void setInterval(Integer interval) {
-        this.interval = interval;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
 }

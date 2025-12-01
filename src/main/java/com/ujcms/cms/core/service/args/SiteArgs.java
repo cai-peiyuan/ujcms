@@ -15,15 +15,8 @@ import java.util.Map;
  */
 public class SiteArgs extends BaseQueryArgs {
     @Nullable
-    private Map<String, String> customsQueryMap;
-    @Nullable
     private Long fullOrgId;
     private boolean queryHasChildren = false;
-
-    public SiteArgs customsQueryMap(Map<String, String> customsQueryMap) {
-        this.customsQueryMap = customsQueryMap;
-        return this;
-    }
 
     public SiteArgs parentId(@Nullable Long parentId) {
         if (parentId != null) {
@@ -78,11 +71,6 @@ public class SiteArgs extends BaseQueryArgs {
 
     private SiteArgs(Map<String, Object> queryMap) {
         super(queryMap);
-    }
-
-    @Nullable
-    public Map<String, String> getCustomsQueryMap() {
-        return customsQueryMap;
     }
 
     @Nullable

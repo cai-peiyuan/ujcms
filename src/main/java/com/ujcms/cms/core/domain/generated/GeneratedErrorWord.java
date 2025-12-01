@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedErrorWord implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -49,36 +51,4 @@ public class GeneratedErrorWord implements Serializable {
     @NotNull
     @Schema(description="是否启用")
     private Boolean enabled = true;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCorrect() {
-        return correct;
-    }
-
-    public void setCorrect(String correct) {
-        this.correct = correct;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
 }

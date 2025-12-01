@@ -18,8 +18,6 @@ import java.util.Map;
  */
 public class ArticleArgs extends BaseQueryArgs {
     @Nullable
-    private Map<String, String> customsQueryMap;
-    @Nullable
     private Collection<Long> channelAncestorIds;
     @Nullable
     private Collection<Long> orgIds;
@@ -31,11 +29,6 @@ public class ArticleArgs extends BaseQueryArgs {
     private Collection<Long> articleRoleIds;
     @Nullable
     private Collection<Long> articleOrgIds;
-
-    public ArticleArgs customsQueryMap(Map<String, String> customsQueryMap) {
-        this.customsQueryMap = customsQueryMap;
-        return this;
-    }
 
     public ArticleArgs channelAncestorId(@Nullable Long channelAncestorId) {
         if (channelAncestorId != null) {
@@ -220,11 +213,6 @@ public class ArticleArgs extends BaseQueryArgs {
 
     private ArticleArgs(Map<String, Object> queryMap) {
         super(queryMap);
-    }
-
-    @Nullable
-    public Map<String, String> getCustomsQueryMap() {
-        return customsQueryMap;
     }
 
     @Nullable

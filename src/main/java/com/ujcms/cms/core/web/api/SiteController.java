@@ -68,7 +68,6 @@ public class SiteController {
         Map<String, String> params = QueryUtils.getParams(request.getQueryString());
         SiteArgs args = SiteArgs.of(QueryUtils.getQueryMap(params, QUERY_PREFIX));
         SiteListDirective.assemble(args, params);
-        args.customsQueryMap(QueryUtils.getCustomsQueryMap(params));
         return SiteListDirective.selectList(service, args, params);
     }
 

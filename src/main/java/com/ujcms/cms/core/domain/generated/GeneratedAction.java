@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedAction implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -87,79 +89,4 @@ public class GeneratedAction implements Serializable {
     @NotNull
     @Schema(description="创建日期")
     private OffsetDateTime created = OffsetDateTime.now();
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    @Nullable
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(@Nullable Long userId) {
-        this.userId = userId;
-    }
-
-    @Nullable
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(@Nullable String ip) {
-        this.ip = ip;
-    }
-
-    @Nullable
-    public Long getCookie() {
-        return cookie;
-    }
-
-    public void setCookie(@Nullable Long cookie) {
-        this.cookie = cookie;
-    }
-
-    public String getRefType() {
-        return refType;
-    }
-
-    public void setRefType(String refType) {
-        this.refType = refType;
-    }
-
-    public Long getRefId() {
-        return refId;
-    }
-
-    public void setRefId(Long refId) {
-        this.refId = refId;
-    }
-
-    public String getRefOption() {
-        return refOption;
-    }
-
-    public void setRefOption(String refOption) {
-        this.refOption = refOption;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
 }

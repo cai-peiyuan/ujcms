@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedChannelExt implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -64,56 +66,4 @@ public class GeneratedChannelExt implements Serializable {
     @Nullable
     @Schema(description="Markdown正文")
     private String markdown;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public String getStaticFile() {
-        return staticFile;
-    }
-
-    public void setStaticFile(@Nullable String staticFile) {
-        this.staticFile = staticFile;
-    }
-
-    @Nullable
-    public String getMobileStaticFile() {
-        return mobileStaticFile;
-    }
-
-    public void setMobileStaticFile(@Nullable String mobileStaticFile) {
-        this.mobileStaticFile = mobileStaticFile;
-    }
-
-    public Short getEditorType() {
-        return editorType;
-    }
-
-    public void setEditorType(Short editorType) {
-        this.editorType = editorType;
-    }
-
-    @Nullable
-    public String getText() {
-        return text;
-    }
-
-    public void setText(@Nullable String text) {
-        this.text = text;
-    }
-
-    @Nullable
-    public String getMarkdown() {
-        return markdown;
-    }
-
-    public void setMarkdown(@Nullable String markdown) {
-        this.markdown = markdown;
-    }
 }

@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedExample implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -65,56 +67,4 @@ public class GeneratedExample implements Serializable {
     @NotNull
     @Schema(description="是否启用")
     private Boolean enabled = true;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public String getName() {
-        return name;
-    }
-
-    public void setName(@Nullable String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
-    }
-
-    @Nullable
-    public Integer getHeight() {
-        return height;
-    }
-
-    public void setHeight(@Nullable Integer height) {
-        this.height = height;
-    }
-
-    @Nullable
-    public OffsetDateTime getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(@Nullable OffsetDateTime birthday) {
-        this.birthday = birthday;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
 }

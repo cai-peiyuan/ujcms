@@ -154,7 +154,6 @@ public class ArticleListDirective implements TemplateDirectiveModel {
 
         ArticleArgs args = ArticleArgs.of(Directives.getQueryMap(params));
         assemble(args, params, Frontends.getSiteId(env), channelService);
-        args.customsQueryMap(Directives.getCustomsQueryMap(params));
 
         if (isPage) {
             int page = Directives.getPage(params, env);

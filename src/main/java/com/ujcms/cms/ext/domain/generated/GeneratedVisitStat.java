@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 /**
@@ -11,6 +12,7 @@ import org.hibernate.validator.constraints.Length;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedVisitStat implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -98,92 +100,4 @@ public class GeneratedVisitStat implements Serializable {
     @NotNull
     @Schema(description="统计类型(1:新老客户,2:来源,3:国家,4:省份,5:设备,6:操作系统,7:浏览器,8:来源类型)")
     private Short type = 1;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getPvCount() {
-        return pvCount;
-    }
-
-    public void setPvCount(Long pvCount) {
-        this.pvCount = pvCount;
-    }
-
-    public Long getUvCount() {
-        return uvCount;
-    }
-
-    public void setUvCount(Long uvCount) {
-        this.uvCount = uvCount;
-    }
-
-    public Long getIpCount() {
-        return ipCount;
-    }
-
-    public void setIpCount(Long ipCount) {
-        this.ipCount = ipCount;
-    }
-
-    public Long getNvCount() {
-        return nvCount;
-    }
-
-    public void setNvCount(Long nvCount) {
-        this.nvCount = nvCount;
-    }
-
-    public Integer getBounceCount() {
-        return bounceCount;
-    }
-
-    public void setBounceCount(Integer bounceCount) {
-        this.bounceCount = bounceCount;
-    }
-
-    public Integer getDuration() {
-        return duration;
-    }
-
-    public void setDuration(Integer duration) {
-        this.duration = duration;
-    }
-
-    public String getDateString() {
-        return dateString;
-    }
-
-    public void setDateString(String dateString) {
-        this.dateString = dateString;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
 }

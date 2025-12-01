@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.springframework.lang.Nullable;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedSurveyItemFeedback implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -54,45 +56,4 @@ public class GeneratedSurveyItemFeedback implements Serializable {
     @Nullable
     @Schema(description="回答")
     private String answer;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSurveyItemId() {
-        return surveyItemId;
-    }
-
-    public void setSurveyItemId(Long surveyItemId) {
-        this.surveyItemId = surveyItemId;
-    }
-
-    public Long getSurveyFeedbackId() {
-        return surveyFeedbackId;
-    }
-
-    public void setSurveyFeedbackId(Long surveyFeedbackId) {
-        this.surveyFeedbackId = surveyFeedbackId;
-    }
-
-    public Long getSurveyId() {
-        return surveyId;
-    }
-
-    public void setSurveyId(Long surveyId) {
-        this.surveyId = surveyId;
-    }
-
-    @Nullable
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(@Nullable String answer) {
-        this.answer = answer;
-    }
 }

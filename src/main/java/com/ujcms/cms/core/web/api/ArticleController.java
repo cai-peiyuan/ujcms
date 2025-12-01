@@ -99,7 +99,6 @@ public class ArticleController {
         Map<String, String> params = QueryUtils.getParams(request.getQueryString());
         ArticleArgs args = ArticleArgs.of(QueryUtils.getQueryMap(params, QUERY_PREFIX));
         ArticleListDirective.assemble(args, params, site.getId(), channelService);
-        args.customsQueryMap(QueryUtils.getCustomsQueryMap(params));
         return handle.apply(args, params);
     }
 

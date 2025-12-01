@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedUserOpenid implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -74,63 +76,4 @@ public class GeneratedUserOpenid implements Serializable {
     @Nullable
     @Schema(description="大头像URL")
     private String largeAvatarUrl;
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getProvider() {
-        return provider;
-    }
-
-    public void setProvider(String provider) {
-        this.provider = provider;
-    }
-
-    public String getOpenid() {
-        return openid;
-    }
-
-    public void setOpenid(String openid) {
-        this.openid = openid;
-    }
-
-    @Nullable
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(@Nullable String nickname) {
-        this.nickname = nickname;
-    }
-
-    public Short getGender() {
-        return gender;
-    }
-
-    public void setGender(Short gender) {
-        this.gender = gender;
-    }
-
-    @Nullable
-    public String getAvatarUrl() {
-        return avatarUrl;
-    }
-
-    public void setAvatarUrl(@Nullable String avatarUrl) {
-        this.avatarUrl = avatarUrl;
-    }
-
-    @Nullable
-    public String getLargeAvatarUrl() {
-        return largeAvatarUrl;
-    }
-
-    public void setLargeAvatarUrl(@Nullable String largeAvatarUrl) {
-        this.largeAvatarUrl = largeAvatarUrl;
-    }
 }

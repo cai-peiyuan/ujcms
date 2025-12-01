@@ -37,6 +37,8 @@ public class SuperBaseModel extends AbstractJavaGenerator {
         topLevelClass.addImportedType(new FullyQualifiedJavaType("java.io.Serial"));
         topLevelClass.addImportedType(new FullyQualifiedJavaType("java.io.Serializable"));
         topLevelClass.addSuperInterface(new FullyQualifiedJavaType("java.io.Serializable"));
+        topLevelClass.addImportedType(new FullyQualifiedJavaType("lombok.Data"));
+        topLevelClass.addAnnotation("@Data");
         commentGenerator.addJavaFileComment(topLevelClass);
 
         FullyQualifiedJavaType superClass = getSuperClass();
@@ -92,18 +94,6 @@ public class SuperBaseModel extends AbstractJavaGenerator {
             if (plugins.modelFieldGenerated(field, topLevelClass, introspectedColumn, introspectedTable, Plugin.ModelClassType.BASE_RECORD)) {
                 topLevelClass.addField(field);
                 topLevelClass.addImportedType(field.getType());
-            }
-
-            Method method = getJavaBeansGetter(introspectedColumn, context, introspectedTable);
-            if (plugins.modelGetterMethodGenerated(method, topLevelClass, introspectedColumn, introspectedTable, Plugin.ModelClassType.BASE_RECORD)) {
-                topLevelClass.addMethod(method);
-            }
-
-            if (!introspectedTable.isImmutable()) {
-                method = getJavaBeansSetter(introspectedColumn, context, introspectedTable);
-                if (plugins.modelSetterMethodGenerated(method, topLevelClass, introspectedColumn, introspectedTable, Plugin.ModelClassType.BASE_RECORD)) {
-                    topLevelClass.addMethod(method);
-                }
             }
         }
 

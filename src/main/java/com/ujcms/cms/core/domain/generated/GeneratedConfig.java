@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedConfig implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -151,154 +153,4 @@ public class GeneratedConfig implements Serializable {
     @Nullable
     @Schema(description="自定义设置")
     private String customsSettings;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public String getContextPath() {
-        return contextPath;
-    }
-
-    public void setContextPath(@Nullable String contextPath) {
-        this.contextPath = contextPath;
-    }
-
-    @Nullable
-    public Integer getPort() {
-        return port;
-    }
-
-    public void setPort(@Nullable Integer port) {
-        this.port = port;
-    }
-
-    public Boolean getMultiDomain() {
-        return multiDomain;
-    }
-
-    public void setMultiDomain(Boolean multiDomain) {
-        this.multiDomain = multiDomain;
-    }
-
-    @Nullable
-    public String getChannelUrl() {
-        return channelUrl;
-    }
-
-    public void setChannelUrl(@Nullable String channelUrl) {
-        this.channelUrl = channelUrl;
-    }
-
-    @Nullable
-    public String getArticleUrl() {
-        return articleUrl;
-    }
-
-    public void setArticleUrl(@Nullable String articleUrl) {
-        this.articleUrl = articleUrl;
-    }
-
-    public Long getDefaultSiteId() {
-        return defaultSiteId;
-    }
-
-    public void setDefaultSiteId(Long defaultSiteId) {
-        this.defaultSiteId = defaultSiteId;
-    }
-
-    @Nullable
-    public String getUploadSettings() {
-        return uploadSettings;
-    }
-
-    public void setUploadSettings(@Nullable String uploadSettings) {
-        this.uploadSettings = uploadSettings;
-    }
-
-    @Nullable
-    public String getGreySettings() {
-        return greySettings;
-    }
-
-    public void setGreySettings(@Nullable String greySettings) {
-        this.greySettings = greySettings;
-    }
-
-    @Nullable
-    public String getSecuritySettings() {
-        return securitySettings;
-    }
-
-    public void setSecuritySettings(@Nullable String securitySettings) {
-        this.securitySettings = securitySettings;
-    }
-
-    @Nullable
-    public String getRegisterSettings() {
-        return registerSettings;
-    }
-
-    public void setRegisterSettings(@Nullable String registerSettings) {
-        this.registerSettings = registerSettings;
-    }
-
-    @Nullable
-    public String getSmsSettings() {
-        return smsSettings;
-    }
-
-    public void setSmsSettings(@Nullable String smsSettings) {
-        this.smsSettings = smsSettings;
-    }
-
-    @Nullable
-    public String getEmailSettings() {
-        return emailSettings;
-    }
-
-    public void setEmailSettings(@Nullable String emailSettings) {
-        this.emailSettings = emailSettings;
-    }
-
-    @Nullable
-    public String getUploadStorageSettings() {
-        return uploadStorageSettings;
-    }
-
-    public void setUploadStorageSettings(@Nullable String uploadStorageSettings) {
-        this.uploadStorageSettings = uploadStorageSettings;
-    }
-
-    @Nullable
-    public String getHtmlStorageSettings() {
-        return htmlStorageSettings;
-    }
-
-    public void setHtmlStorageSettings(@Nullable String htmlStorageSettings) {
-        this.htmlStorageSettings = htmlStorageSettings;
-    }
-
-    @Nullable
-    public String getTemplateStorageSettings() {
-        return templateStorageSettings;
-    }
-
-    public void setTemplateStorageSettings(@Nullable String templateStorageSettings) {
-        this.templateStorageSettings = templateStorageSettings;
-    }
-
-    @Nullable
-    public String getCustomsSettings() {
-        return customsSettings;
-    }
-
-    public void setCustomsSettings(@Nullable String customsSettings) {
-        this.customsSettings = customsSettings;
-    }
 }

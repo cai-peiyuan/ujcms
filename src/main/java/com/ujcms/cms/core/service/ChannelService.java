@@ -13,7 +13,6 @@ import com.ujcms.commons.db.identifier.SnowflakeSequence;
 import com.ujcms.commons.db.tree.TreeMoveType;
 import com.ujcms.commons.db.tree.TreeService;
 import com.ujcms.commons.db.tree.TreeSortEntity;
-import com.ujcms.commons.query.CustomFieldQuery;
 import com.ujcms.commons.query.QueryInfo;
 import com.ujcms.commons.query.QueryParser;
 import com.ujcms.commons.web.exception.LogicException;
@@ -141,6 +140,7 @@ public class ChannelService implements ModelDeleteListener, SiteDeleteListener {
         }
         mapper.updateNav(ids, nav);
     }
+
     @Transactional(rollbackFor = Exception.class)
     public void updateReal(List<Long> ids, Boolean real) {
         if (ids.isEmpty()) {
@@ -155,7 +155,7 @@ public class ChannelService implements ModelDeleteListener, SiteDeleteListener {
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void merge(Channel from,Channel to) {
+    public void merge(Channel from, Channel to) {
         articleMapper.updateChannelId(from.getId(), to.getId());
         delete(from);
     }
@@ -251,7 +251,7 @@ public class ChannelService implements ModelDeleteListener, SiteDeleteListener {
     }
 
     public List<Channel> listBySiteIdAndAlias(@Nullable Long siteId, Collection<String> aliases,
-                                              boolean isIncludeSubSite) {
+            boolean isIncludeSubSite) {
         ChannelArgs args = ChannelArgs.of().inAliases(aliases);
         if (isIncludeSubSite) {
             args.siteAncestorId(siteId);
@@ -280,9 +280,8 @@ public class ChannelService implements ModelDeleteListener, SiteDeleteListener {
 
     public List<Channel> selectList(ChannelArgs args) {
         QueryInfo queryInfo = QueryParser.parse(args.getQueryMap(), GeneratedChannel.TABLE_NAME, "order,id");
-        List<QueryInfo.WhereCondition> customsCondition = CustomFieldQuery.parse(args.getCustomsQueryMap());
-        return mapper.selectAll(queryInfo, customsCondition, args.isQueryHasChildren(),
-                args.getArticleRoleIds(), args.getArticleOrgIds());
+        return mapper.selectAll(queryInfo, args.isQueryHasChildren(), args.getArticleRoleIds(),
+                args.getArticleOrgIds());
     }
 
     public List<Channel> selectList(ChannelArgs args, int offset, int limit) {

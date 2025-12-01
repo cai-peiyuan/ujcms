@@ -68,7 +68,6 @@ public interface ArticleMapper extends OrderEntityMapper {
      * 根据查询条件获取列表
      *
      * @param queryInfo          查询条件
-     * @param customsCondition   自定义字段查询条件
      * @param channelAncestorIds 栏目ID列表
      * @param orgIds             组织ID列表
      * @param articleRoleIds     文章权限角色ID列表
@@ -78,7 +77,6 @@ public interface ArticleMapper extends OrderEntityMapper {
      * @return 数据列表
      */
     List<Article> selectAll(@Nullable @Param("queryInfo") QueryInfo queryInfo,
-                            @Nullable @Param("customsCondition") List<QueryInfo.WhereCondition> customsCondition,
                             @Nullable @Param("channelAncestorIds") Collection<Long> channelAncestorIds,
                             @Nullable @Param("orgIds") Collection<Long> orgIds,
                             @Nullable @Param("articleRoleIds") Collection<Long> articleRoleIds,

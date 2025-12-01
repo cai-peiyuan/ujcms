@@ -42,17 +42,15 @@ public interface ChannelMapper extends TreeEntityMapper<Channel> {
      * 根据查询条件获取列表
      *
      * @param queryInfo          查询条件
-     * @param customsCondition   自定义字段查询条件
      * @param isQueryHasChildren 是否查询包含子栏目
      * @param articleRoleIds     文章权限角色ID列表
      * @param articleOrgIds      文章权限组织ID列表
      * @return 数据列表
      */
     List<Channel> selectAll(@Nullable @Param("queryInfo") QueryInfo queryInfo,
-                            @Nullable @Param("customsCondition") List<QueryInfo.WhereCondition> customsCondition,
-                            @Param("isQueryHasChildren") boolean isQueryHasChildren,
-                            @Nullable @Param("articleRoleIds") Collection<Long> articleRoleIds,
-                            @Nullable @Param("articleOrgIds") Collection<Long> articleOrgIds);
+            @Param("isQueryHasChildren") boolean isQueryHasChildren,
+            @Nullable @Param("articleRoleIds") Collection<Long> articleRoleIds,
+            @Nullable @Param("articleOrgIds") Collection<Long> articleOrgIds);
 
     /**
      * 根据 模型ID 查询栏目数量
@@ -116,8 +114,8 @@ public interface ChannelMapper extends TreeEntityMapper<Channel> {
      * @return 栏目ID 列表
      */
     List<Long> listChannelPermissions(@Param("roleIds") Collection<Long> roleIds,
-                                      @Param("orgIds") Collection<Long> orgIds,
-                                      @Param("siteId") @Nullable Long siteId);
+            @Param("orgIds") Collection<Long> orgIds, @Param("siteId") @Nullable Long siteId);
+
     /**
      * 获取文章权限的 栏目ID 列表
      *
@@ -127,8 +125,7 @@ public interface ChannelMapper extends TreeEntityMapper<Channel> {
      * @return 栏目ID 列表
      */
     List<Long> listArticlePermissions(@Param("roleIds") Collection<Long> roleIds,
-                                      @Param("orgIds") Collection<Long> orgIds,
-                                      @Param("siteId") @Nullable Long siteId);
+            @Param("orgIds") Collection<Long> orgIds, @Param("siteId") @Nullable Long siteId);
 
     /**
      * 根据父栏目ID获取子栏目列表
@@ -179,10 +176,11 @@ public interface ChannelMapper extends TreeEntityMapper<Channel> {
      * @return 更新条数
      */
     int updateNav(@Param("ids") List<Long> ids, @Param("nav") Boolean nav);
+
     /**
      * 设置是否文章栏目
      *
-     * @param ids 待设置的栏目ID
+     * @param ids  待设置的栏目ID
      * @param real 是否文章栏目
      * @return 更新条数
      */

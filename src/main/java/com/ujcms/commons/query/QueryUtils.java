@@ -60,11 +60,6 @@ public class QueryUtils {
                 .collect(Collectors.toMap(entry -> entry.getKey().substring(prefix.length()), Map.Entry::getValue));
     }
 
-    public static Map<String, String> getCustomsQueryMap(Map<String, String> params) {
-        return params.entrySet().stream().filter(entry -> entry.getKey().startsWith(CUSTOMS_PREFIX)).collect(
-                Collectors.toMap(entry -> entry.getKey().substring(CUSTOMS_PREFIX.length()), Map.Entry::getValue));
-    }
-
     private static final Pattern QUERY_PATTERN = Pattern.compile("[\\w@$-]*");
     private static final Pattern TABLE_PATTERN = Pattern.compile("[\\w]*");
     private static final Pattern FIELD_PATTERN = Pattern.compile("[\\w.]*");
@@ -265,7 +260,7 @@ public class QueryUtils {
             case OPERATOR_LT -> "<";
             case OPERATOR_LE -> "<=";
             default -> throw new QueryException("QueryParser operator '" + s + "' not supported. Support: Like, Contain, " +
-                    "StartsWith, EndsWith, In, NotIn, IsNull, IsNotNull, EQ, NE, GT, LT, GE, LE, SubIn, SubEQ");
+                    "StartsWith, EndsWith, In, NotIn, IsNull, IsNotNull, EQ, NE, GT, LT, GE, LE, ArrayIn, ArrayEQ");
         };
     }
 

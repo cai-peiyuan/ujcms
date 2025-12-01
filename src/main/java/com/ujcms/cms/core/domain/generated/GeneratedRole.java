@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedRole implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -141,144 +143,4 @@ public class GeneratedRole implements Serializable {
     @Nullable
     @Schema(description="授权权限")
     private String grantPermission;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(@Nullable Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
-    }
-
-    public Boolean getAllPermission() {
-        return allPermission;
-    }
-
-    public void setAllPermission(Boolean allPermission) {
-        this.allPermission = allPermission;
-    }
-
-    public Boolean getAllGrantPermission() {
-        return allGrantPermission;
-    }
-
-    public void setAllGrantPermission(Boolean allGrantPermission) {
-        this.allGrantPermission = allGrantPermission;
-    }
-
-    public Boolean getGlobalPermission() {
-        return globalPermission;
-    }
-
-    public void setGlobalPermission(Boolean globalPermission) {
-        this.globalPermission = globalPermission;
-    }
-
-    public Boolean getAllArticlePermission() {
-        return allArticlePermission;
-    }
-
-    public void setAllArticlePermission(Boolean allArticlePermission) {
-        this.allArticlePermission = allArticlePermission;
-    }
-
-    public Boolean getAllChannelPermission() {
-        return allChannelPermission;
-    }
-
-    public void setAllChannelPermission(Boolean allChannelPermission) {
-        this.allChannelPermission = allChannelPermission;
-    }
-
-    public Short getDataScope() {
-        return dataScope;
-    }
-
-    public void setDataScope(Short dataScope) {
-        this.dataScope = dataScope;
-    }
-
-    public Boolean getAllStatusPermission() {
-        return allStatusPermission;
-    }
-
-    public void setAllStatusPermission(Boolean allStatusPermission) {
-        this.allStatusPermission = allStatusPermission;
-    }
-
-    public Short getRank() {
-        return rank;
-    }
-
-    public void setRank(Short rank) {
-        this.rank = rank;
-    }
-
-    public Short getType() {
-        return type;
-    }
-
-    public void setType(Short type) {
-        this.type = type;
-    }
-
-    public Short getScope() {
-        return scope;
-    }
-
-    public void setScope(Short scope) {
-        this.scope = scope;
-    }
-
-    public Integer getOrder() {
-        return order;
-    }
-
-    public void setOrder(Integer order) {
-        this.order = order;
-    }
-
-    @Nullable
-    public String getPermission() {
-        return permission;
-    }
-
-    public void setPermission(@Nullable String permission) {
-        this.permission = permission;
-    }
-
-    @Nullable
-    public String getGrantPermission() {
-        return grantPermission;
-    }
-
-    public void setGrantPermission(@Nullable String grantPermission) {
-        this.grantPermission = grantPermission;
-    }
 }

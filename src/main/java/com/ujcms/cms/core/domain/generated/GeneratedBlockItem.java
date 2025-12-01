@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -12,6 +13,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedBlockItem implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -125,123 +127,4 @@ public class GeneratedBlockItem implements Serializable {
     @NotNull
     @Schema(description="排列顺序")
     private Long order = 0L;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getSiteId() {
-        return siteId;
-    }
-
-    public void setSiteId(Long siteId) {
-        this.siteId = siteId;
-    }
-
-    public Long getBlockId() {
-        return blockId;
-    }
-
-    public void setBlockId(Long blockId) {
-        this.blockId = blockId;
-    }
-
-    @Nullable
-    public Long getArticleId() {
-        return articleId;
-    }
-
-    public void setArticleId(@Nullable Long articleId) {
-        this.articleId = articleId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Nullable
-    public String getSubtitle() {
-        return subtitle;
-    }
-
-    public void setSubtitle(@Nullable String subtitle) {
-        this.subtitle = subtitle;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
-    }
-
-    @Nullable
-    public String getLinkUrl() {
-        return linkUrl;
-    }
-
-    public void setLinkUrl(@Nullable String linkUrl) {
-        this.linkUrl = linkUrl;
-    }
-
-    @Nullable
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(@Nullable String image) {
-        this.image = image;
-    }
-
-    @Nullable
-    public String getMobileImage() {
-        return mobileImage;
-    }
-
-    public void setMobileImage(@Nullable String mobileImage) {
-        this.mobileImage = mobileImage;
-    }
-
-    @Nullable
-    public String getVideo() {
-        return video;
-    }
-
-    public void setVideo(@Nullable String video) {
-        this.video = video;
-    }
-
-    public Boolean getTargetBlank() {
-        return targetBlank;
-    }
-
-    public void setTargetBlank(Boolean targetBlank) {
-        this.targetBlank = targetBlank;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
-    }
 }

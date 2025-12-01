@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.lang.Nullable;
 
@@ -13,6 +14,7 @@ import org.springframework.lang.Nullable;
  *
  * @author MyBatis Generator
  */
+@Data
 public class GeneratedUserExt implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -102,96 +104,4 @@ public class GeneratedUserExt implements Serializable {
     @NotNull
     @Schema(description="登录错误次数")
     private Integer errorCount = 0;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Nullable
-    public OffsetDateTime getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(@Nullable OffsetDateTime birthday) {
-        this.birthday = birthday;
-    }
-
-    @Nullable
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(@Nullable String location) {
-        this.location = location;
-    }
-
-    @Nullable
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(@Nullable String bio) {
-        this.bio = bio;
-    }
-
-    public OffsetDateTime getCreated() {
-        return created;
-    }
-
-    public void setCreated(OffsetDateTime created) {
-        this.created = created;
-    }
-
-    @Nullable
-    public String getHistoryPassword() {
-        return historyPassword;
-    }
-
-    public void setHistoryPassword(@Nullable String historyPassword) {
-        this.historyPassword = historyPassword;
-    }
-
-    public OffsetDateTime getLoginDate() {
-        return loginDate;
-    }
-
-    public void setLoginDate(OffsetDateTime loginDate) {
-        this.loginDate = loginDate;
-    }
-
-    public String getLoginIp() {
-        return loginIp;
-    }
-
-    public void setLoginIp(String loginIp) {
-        this.loginIp = loginIp;
-    }
-
-    public Integer getLoginCount() {
-        return loginCount;
-    }
-
-    public void setLoginCount(Integer loginCount) {
-        this.loginCount = loginCount;
-    }
-
-    public OffsetDateTime getErrorDate() {
-        return errorDate;
-    }
-
-    public void setErrorDate(OffsetDateTime errorDate) {
-        this.errorDate = errorDate;
-    }
-
-    public Integer getErrorCount() {
-        return errorCount;
-    }
-
-    public void setErrorCount(Integer errorCount) {
-        this.errorCount = errorCount;
-    }
 }
