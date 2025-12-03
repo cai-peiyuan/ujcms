@@ -1,0 +1,16 @@
+[#escape x as (x)!?html]
+[#list list as bean]
+<style>
+  .nowrap-ellipsis {
+  white-space: nowrap;      /* 强制不换行 */
+  overflow: hidden;         /* 超出部分隐藏 */
+  text-overflow: ellipsis;  /* 用 … 代替被截断的文字 */
+  max-width: 400px;
+}
+</style>
+<li>[@A bean=bean class="cm-link text-decoration-none nowrap-ellipsis"/]<span>${format(bean.publishDate, 'MM-dd')}</span></li>
+[#if !bean_has_next]
+<script>lastArticleDate = '${bean.publishDate.format()}'</script>
+[/#if]
+[/#list]
+[/#escape]

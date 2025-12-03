@@ -1,0 +1,278 @@
+[#escape x as (x)!?html]
+<div class="col-sm-3 px-3 d-none d-lg-block">
+
+  <!--链接和导航设置-->
+  <style>
+    /*导航链接*/
+    .daohang-link{ width: 100%; float: right;height:270px;}
+    .daohang-link ul{ margin-left: 0px;}
+    .daohang-link ul li.fuLi{ width: 100%; height:auto; float: left; position: relative; list-style: none;list-style-type: none;}
+    .daohang-link ul li.fuLi a{ margin: 0px  0px 15px 0px; color: #575c68; height: 70px; display: block; background-color:#f1f4f9; text-align: left; font-size: 20px; line-height: 70px; box-shadow: 0px 3px 4px rgba(12,63,133,0.3);font-weight: bold; position: relative;}
+
+    .daohang-link ul li.fuLi a span{ height:70px;display: block; padding-left:30px; padding-right:80px; text-align: left;}
+    .daohang-link ul li.fuLi:last-child{ width: 100%;}
+    .daohang-link ul li.fuLi:last-child a{ margin-bottom:0px;}
+    .daohang-link ul li.fuLi a i.daohang-icon-img{ width:60px; height:60px; position: absolute; right: 10px; top: 50%; margin-top:-30px;background-repeat: no-repeat; background-position:center center; }
+
+    .daohang-link ul li.fuLi a b{ width:30px; height:30px;line-height: 30px; font-size:18px; color:#a2aabf;  position: absolute; left: 10px; top: 50%; margin-top:-17px;}
+
+    .daohang-link ul li.fuLi .yq-link{ background-color: #fff; border: 1px solid #a0b4e1; position: absolute; right: 220px; top: -120px;  z-index: 999; display: none; box-shadow: 2px 5px 20px rgba(12,63,133,0.2); }
+    .daohang-link ul li.fuLi .yq-link ul{ display: block; padding: 15px; width: 100%;margin: 0;}
+    .daohang-link ul li.fuLi .yq-link ul li{ height: 50px;line-height:50px; width:33.333%; display: block;  float: left; font-size: 15px; position: relative; }
+    .daohang-link ul li.fuLi .yq-link ul li span{ font-size: 15px; border: 1px solid #cfe4fb;   background: #f4f9ff; line-height:40px;  border-radius: 5px;  margin: 0 10px; height: 40px;text-align: center;display: block; color: #4c515b;box-shadow: inherit;font-weight: inherit;}
+    .daohang-link ul li.fuLi:hover .yq-link{display: block;}
+
+    .daohang-link ul li.fuLi .yq-link ul li span a{ display: inline-block; color: #00307f; font-size: 15px; box-shadow: inherit;font-weight: inherit;line-height:35px; height: 35px; text-align: center; margin: 0 1px; background-color:inherit;}
+    .daohang-link ul li.fuLi .yq-link ul li span a:hover{ color: #00307f; }
+
+    .daohang-link ul li.fuLi .yq-link.jiguan-link1{ width: 450px; height: 430px; }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link1 ul li{ width: 25%;}
+
+    .daohang-link ul li.fuLi .yq-link.jiguan-link2{ width: 600px; height: 240px; }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link2 ul li{ width: 25%;}
+
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3{ width: 1000px; height: 470px; top: -200px; }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3 ul li{ width: 25%; height: auto;}
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3 ul li span{ margin: 5px; height:45px; line-height: 45px;}
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3 ul li:nth-child(16) span{   line-height: 45px;  }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3 ul li:nth-child(16) span a{   line-height: 20px;height: auto;   }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3 ul li:nth-child(20) span{   line-height: 45px;  }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link3 ul li:nth-child(20) span a{   line-height: 20px;height: auto;   }
+
+    .daohang-link ul li.fuLi .yq-link.jiguan-link4{ width: 400px; height: 200px; }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link4 ul li{ width: 50%;}
+
+    .daohang-link ul li.fuLi .yq-link.jiguan-link5{ width: 400px; height: 360px; right: 300px; }
+    .daohang-link ul li.fuLi .yq-link.jiguan-link5 ul li{ width: 100%;}
+
+    .hdjl_list #BodyLabel{ min-height:150px; padding:30px 0px;}
+    .hdjl_list #BodyLabel a{ margin:0 20px;  display: inline-block;
+        padding: 0 30px;
+        min-width: 235px;
+        height: 55px;
+        line-height: 55px;
+        background-color: #00307f;
+        color: #fff;
+        border-radius: 27px;
+        text-align: center;
+        font-size: 22px;
+        box-shadow: 3px 5px 8px rgba(12,63,133,0.2); }
+
+    /* 友情链接 */
+      .footerlink{  position: relative; background-color: #fff; height:70px;}
+
+      .LinkItem{width:1200px;  margin:0 auto; height:70px; line-height:70px; font-size: 16px;}
+      .LinkItem div.lk1{ width: 12%; padding-left: 35px; float: left; }
+      .LinkItem div.lk1 a{ color: #2a508e; font-size: 18px; font-weight: bold;}
+      .LinkItem div.lk1 a:hover{ color:#3882dd;}
+      .LinkItem ul{ margin-left:-30px;}
+      .LinkItem ul li{ width: 33.33%; height: auto; float: left; text-align: center; display: block;}
+      .LinkItem ul li a.select-a{ height: 70px;  line-height: 70px; font-size: 20px; font-weight: bold; color: #353535; display: block; color: #333; margin-left:30px; background-color: #f1f5fa; border-radius: 5px; padding-left: 150px; padding-right: 100px; position: relative; box-shadow: 0px 5px 8px rgba(12,63,133,0.2);}
+      .LinkItem ul li:last-child a.select-a{ margin-right: 0px;}
+      .LinkItem ul li a.select-a:hover{ background-color:#ecf5fe;}
+      .LinkItem ul li a.select-a span{ width: 80%; height: 70px;display: block; float: left; text-align: right;}
+      .LinkItem ul li a.select-a i.icon-jt{ width: 70px; height: 70px; display: block; line-height: 75px; font-size: 20px; position: absolute; right: 30px; color: #b1b2b9; }
+      .LinkItem ul li a.select-a i.daohang-icon-img{ width: 70px; height: 70px;  position: absolute; left: 50px; background-position: center center; background-repeat: no-repeat;}
+      .daohang-icon1{ background-image: url("${files}/images/guo-daohang.png")}
+      .daohang-icon2{ background-image: url("${files}/images/sheng-daohang.png")}
+      .daohang-icon3{ background-image: url("${files}/images/ting-daohang.png")}
+
+      .daohang-nr{ position: absolute; height: 0; bottom:70px; overflow: hidden; width: 1200px; }
+      .daohang-nr ul{ padding:20px;  width: 370px; display: none; position: absolute; bottom: 0;  background-color:#fff;  border: 1px solid #b7d2f0;  border-radius: 10px;  box-shadow: 0px 8px 20px rgba(12,63,133,0.2);}
+      .daohang-nr ul li{height: 50px;line-height:50px; width:33.333%; display: block;  float: left; font-size: 15px; position: relative; }
+      .daohang-nr ul li a{  border: 1px solid #b7d2f0;   background-color: #e9f4ff; line-height:40px;  border-radius: 5px;  margin: 0 10px; height: 40px;text-align: center; color: #333; display: block;}
+      .daohang-nr ul li a:hover{  border: 1px solid #0062bf; background-color: #0062bf;color:#ffffff;}
+
+      .daohang-nr  ul.daohang1{ height: 600px;}
+      .daohang-nr  ul.daohang2{ height: 300px; left: 400px; }
+      .daohang-nr  ul.daohang3{ width: 700px; right: 0; height: 550px;}
+      .daohang-nr  ul.daohang3 li{ width:25%; }
+
+  </style>
+  <div class="TabTitle1">
+    <ul>
+      <li class="hover" ><a href="" class="img1" target="">各地导航</a></li>
+    </ul>
+  </div>
+  <div class="daohang-link">
+    <ul>
+      <li class="fuLi"><a href="#"><b class="icon iconfont icon-jiantou1"></b><span>全国导航</span><i class="daohang-icon-img daohang-icon1"></i></a>
+        <div class="yq-link jiguan-link1">
+          <ul>
+            <li><span><a target="_blank" href="http://www.ga/" title="公安部">  公安部</a></span></li>
+            <li><span><a target="_blank" href="http://www.bj/" title="北京">  北京</a></span></li>
+            <li><span><a target="_blank" href="http://www.tj/" title="天津">  天津</a></span></li>
+            <li><span><a target="_blank" href="http://www.sh/" title="上海">  上海</a></span></li>
+            <li><span><a target="_blank" href="http://www.sx/" title="山西">  山西</a></span></li>
+            <li><span><a target="_blank" href="http://www.jx:2222/index.html" title="江西">  江西</a></span></li>
+            <li><span><a target="_blank" href="http://www.nm/" title="内蒙古">  内蒙古</a></span></li>
+            <li><span><a target="_blank" href="http://www.ln/" title="辽宁">  辽宁</a></span></li>
+            <li><span><a target="_blank" href="http://www.jl/" title="吉林">  吉林</a></span></li>
+            <li><span><a target="_blank" href="http://www.hl/" title="黑龙江">  黑龙江</a></span></li>
+            <li><span><a target="_blank" href="http://www.js/" title="江苏">  江苏</a></span></li>
+            <li><span><a target="_blank" href="http://www.zj/" title="浙江">  浙江</a></span></li>
+            <li><span><a target="_blank" href="http://www.ah/" title="安徽">  安徽</a></span></li>
+            <li><span><a target="_blank" href="http://www.fj/" title="福建">  福建</a></span></li>
+            <li><span><a target="_blank" href="http://www.sd/" title="山东">  山东</a></span></li>
+            <li><span><a target="_blank" href="http://www.en/" title="河南">  河南</a></span></li>
+            <li><span><a target="_blank" href="http://www.hb/" title="湖北">  湖北</a></span></li>
+            <li><span><a target="_blank" href="http://www.hn/" title="湖南">  湖南</a></span></li>
+            <li><span><a target="_blank" href="http://www.gd/" title="广东">  广东</a></span></li>
+            <li><span><a target="_blank" href="http://www.gx/" title="广西">  广西</a></span></li>
+            <li><span><a target="_blank" href="http://www.an/" title="海南">  海南</a></span></li>
+            <li><span><a target="_blank" href="http://www.sc/" title="四川">  四川</a></span></li>
+            <li><span><a target="_blank" href="http://www.zx.cq/" title="重庆">  重庆</a></span></li>
+            <li><span><a target="_blank" href="http://www.gz/" title="贵州">  贵州</a></span></li>
+            <li><span><a target="_blank" href="http://www.yn/" title="云南">  云南</a></span></li>
+            <li><span><a target="_blank" href="http://www.xz/" title="西藏">  西藏</a></span></li>
+            <li><span><a target="_blank" href="http://92.1.1.9:8081/serviceweb/" title="陕西">  陕西</a></span></li>
+            <li><span><a target="_blank" href="http://www.gs/" title="甘肃">  甘肃</a></span></li>
+            <li><span><a target="_blank" href="http://www.qh/" title="青海">  青海</a></span></li>
+            <li><span><a target="_blank" href="http://www.nx/" title="宁夏">  宁夏</a></span></li>
+            <li><span><a target="_blank" href="http://www.xj/" title="新疆">  新疆</a></span></li>
+            <li><span><a target="_blank" href="http://www.bt/" title="建设兵团">  建设兵团</a></span></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </li>
+      <li class="fuLi"><a href="#"><b class="icon iconfont icon-jiantou1"></b><span>全省导航</span><i class="daohang-icon-img daohang-icon2"></i></a>
+        <div class="yq-link jiguan-link2">
+          <ul>
+            <li><span><a target="_blank" href="http://www.sjzs.eb/" title="石家庄">  石家庄</a></span></li>
+            <li><span><a target="_blank" href="http://www.cds.eb/" title="承德">  承德</a></span></li>
+            <li><span><a target="_blank" href="http://www.zjks.eb/" title="张家口">  张家口</a></span></li>
+            <li><span><a target="_blank" href="http://10.26.128.9/" title="秦皇岛">  秦皇岛</a></span></li>
+            <li><span><a target="_blank" href="http://www.tss.eb/" title="唐山">  唐山</a></span></li>
+            <li><span><a target="_blank" href="http://www.lfs.eb/" title="廊坊">  廊坊</a></span></li>
+            <li><span><a target="_blank" href="http://www.bds.eb/" title="保定">  保定</a></span></li>
+            <li><span><a target="_blank" href="http://www.czs.eb/" title="沧州">  沧州</a></span></li>
+            <li><span><a target="_blank" href="http://www.hss.eb/" title="衡水">  衡水</a></span></li>
+            <li><span><a target="_blank" href="http://www.xts.eb/" title="邢台">  邢台</a></span></li>
+            <li><span><a target="_blank" href="http://www.hds.eb/" title="邯郸">  邯郸</a></span></li>
+            <li><span><a target="_blank" href="http://www.jz.eb/" title="冀中">  冀中</a></span></li>
+            <li><span><a target="_blank" href="http://20.232.125.25:90/" title="雄安新区">  雄安新区</a></span></li>
+            <li><span><a target="_blank" href="http://dzs.bds.eb/" title="定州">  定州</a></span></li>
+            <li><span><a target="_blank" href="http://10.25.120.9/" title="辛集">  辛集</a></span></li>
+            <div class="clear"></div>
+          </ul>
+        </div>
+      </li>
+      <li class="fuLi"><a href="#"><b class="icon iconfont icon-jiantou1"></b><span>全省政保导航</span><i class="daohang-icon-img daohang-icon3"></i></a>
+        <div class="yq-link jiguan-link3">
+          <ul class="guLink_v20250427">
+            <li><span><a target="_blank" href="http://www.sjzs.eb/" title="石家庄">  石家庄</a></span></li>
+            <li><span><a target="_blank" href="http://www.cds.eb/" title="承德">  承德</a></span></li>
+            <li><span><a target="_blank" href="http://www.zjks.eb/" title="张家口">  张家口</a></span></li>
+            <li><span><a target="_blank" href="http://10.26.128.9/" title="秦皇岛">  秦皇岛</a></span></li>
+            <li><span><a target="_blank" href="http://www.tss.eb/" title="唐山">  唐山</a></span></li>
+            <li><span><a target="_blank" href="http://www.lfs.eb/" title="廊坊">  廊坊</a></span></li>
+            <li><span><a target="_blank" href="http://www.bds.eb/" title="保定">  保定</a></span></li>
+            <li><span><a target="_blank" href="http://www.czs.eb/" title="沧州">  沧州</a></span></li>
+            <li><span><a target="_blank" href="http://www.hss.eb/" title="衡水">  衡水</a></span></li>
+            <li><span><a target="_blank" href="http://www.xts.eb/" title="邢台">  邢台</a></span></li>
+            <li><span><a target="_blank" href="http://www.hds.eb/" title="邯郸">  邯郸</a></span></li>
+            <li><span><a target="_blank" href="http://www.jz.eb/" title="冀中">  冀中</a></span></li>
+            <li><span><a target="_blank" href="http://20.232.125.25:90/" title="雄安新区">  雄安新区</a></span></li>
+            <li><span><a target="_blank" href="http://dzs.bds.eb/" title="定州">  定州</a></span></li>
+            <li><span><a target="_blank" href="http://10.25.120.9/" title="辛集">  辛集</a></span></li>
+            <div class="clear">
+
+            </div>
+          </ul>
+        </div>
+      </li>
+
+
+    </ul>
+  </div>
+
+  <!--系统导航常用-->
+  <style>
+    .leftsum5 h4{
+      height:49px;
+      line-height:49px;
+      background: #3156a7;
+      text-indent:40px;
+      position:relative;
+      font-size:20px;
+      color:#fff;
+      font-weight:normal;
+      margin-bottom:10px;
+    }
+    .leftsum5 h4 img{
+      position:absolute;
+      top:14px;
+      left:14px;
+      width:22px;
+      height:22px;
+      text-indent:0;
+      overflow:hidden;
+    }
+    .leftsum5_ul1{
+    }
+    .leftsum5_ul1 li{
+      height:40px;
+      line-height:40px;
+      overflow:hidden;
+      text-indent:30px;
+    }
+    .leftsum5_ul1 li.li2{
+      background:#f2f2f2;
+    }
+    .leftsum5_ul2{
+      width:280px;
+      padding-bottom:12px;
+    }
+    .leftsum5_ul2 li{
+      width:140px;
+      height:30px;
+      line-height:30px;
+      overflow:hidden;
+      float:left;
+      text-indent:30px;
+    }
+    .leftsum5_ul2 li a{
+      color:#3156a7;
+    }
+    .pl-2, .px-2{
+    padding-left: 0rem !important;
+    }
+  </style>
+  <div class="TabTitle1">
+    <ul>
+      <li class="hover" ><a href="" class="img1" target="">常用系统</a></li>
+    </ul>
+  </div>
+  <div class="px-2 pb-2 mt-3">
+    <div class="leftsum5">
+      <ul class="leftsum5_ul1">
+        <li class="li2"><a href="http://20.78.210.61:1234" target="_blank">政保麒麟系统</a></li>
+        <li class="li2"><a href="http://20.78.209.102" target="_blank">秦警官人工智能体</a></li>
+        <li class="li2"><a href="http://10.2.67.157/wffz/" target="_blank">全国违法犯罪人员信息库</a></li>
+        <li class="li2"><a href="http://ztry-zyk.zx.ga/" target="_blank">全国在逃人员信息库</a></li>
+        <li class="li2"><a href="http://10.6.1.37:8001/beeaweb/" target="_blank">出入境人员/证件信息库</a></li>
+        <li class="li2"><a href="http://20.2.11.26/portal_heb/openMain.jsp?flag=2/" target="_blank">河北警务信息综合平台</a></li>
+        <li class="li2"><a href="http://10.26.128.9/images/dianhua.htm" target="_blank">市局常用联系电话</a></li>
+        <li class="li2"><a href="https://ys.zyfw.ga/">云搜（插证书）</a></li>
+        <li class="li2"><a href="http://qb.qhds.eb/">风铃系统</a></li>
+        <li class="li2"><a href="http://20.78.210.30:9080">传销黑名单</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!--
+  <div class="TabTitle1">
+    <ul>
+      <li class="hover" ><a href="" class="${dy}/tag" target="">关键字</a></li>
+    </ul>
+  </div>
+  <div class="px-3">
+    [@TagList limit='10';list]
+    [#list list as bean]
+    <a href="${dy}/tag/${bean.id?c}" class="btn btn-secondary btn-sm btn-sm mt-2 ml-2">${bean.name}</a>
+    [/#list]
+    [/@TagList]
+  </div>
+ -->
+</div>
+[/#escape]
